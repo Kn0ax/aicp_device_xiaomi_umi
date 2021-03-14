@@ -10,6 +10,8 @@ $(call inherit-product, device/xiaomi/umi/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
+# Inherit miuicamera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aicp_umi
