@@ -8,15 +8,13 @@
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 $(call inherit-product, vendor/xiaomi/umi/umi-vendor.mk)
 
-# Descendant
-TARGET_FACE_UNLOCK_SUPPORT := YES
-PRODUCT_BOARD_PLATFORM := sm8250
-TARGET_SUPPORTS_BLUR := true
-BUILD_TYPE := Official
-
 # Keylayout
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay 
 
 #Kernelmodules
 #PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/modules,$(TARGET_COPY_OUT_VENDOR)/lib/modules)
