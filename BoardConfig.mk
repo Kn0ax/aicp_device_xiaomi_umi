@@ -13,6 +13,9 @@ DEVICE_PATH := device/xiaomi/umi
 # Assert
 TARGET_OTA_ASSERT_DEVICE := umi
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+
 # Prebuilt Core
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
